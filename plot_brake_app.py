@@ -5,6 +5,9 @@ import plotly.express as px
 import datetime
 import matplotlib.pyplot as plt
 
+st.set_page_config(page_title="Historial Ensayos de performance de freno", page_icon=":station:", layout="wide")
+
+
 
 
 # st.image("https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg", width = 500)
@@ -85,5 +88,25 @@ fig = px.line(x=x,y=y)
 
 # Plot!
 st.plotly_chart(fig)
+
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            footer:after {
+                content:'CENADID - Subgerencia de Ingenieria y Projectos especiales'; 
+                visibility: visible;
+                display: block;
+                position: relative;
+                #background-color: red;
+                padding: 5px;
+                top: 2px;
+                font-size: 15px;
+                color: blue;
+            }
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
