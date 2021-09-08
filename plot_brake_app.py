@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd 
 import numpy as np
 import plotly.express as px
@@ -17,7 +18,29 @@ def read_my_csv(file_name):
 
 
 
+
+
 st.set_page_config(page_title="Historial Ensayos de performance de freno", page_icon=":station:", layout="wide")
+
+
+
+# components.html(
+#     """
+#     <script>
+#         $('meta[property=og:image]').attr('content', 'https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg');
+#     </script>
+#     """
+# )
+
+components.html(
+    """
+    <script>
+        document.querySelector('meta[name="description"]').setAttribute("content", "https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg");
+    </script>
+    """
+)
+
+
 
 # thumbnail_modif = """
 #                 <meta name="description" content="description of your website/webpage, make sure you use keywords!">
@@ -27,16 +50,16 @@ st.set_page_config(page_title="Historial Ensayos de performance de freno", page_
 #                 <meta property="og:type" content="website" />
 #                 <meta property="og:locale" content="en_US" />
 #                   """
-thumbnail_modif = """
-                <meta property="og:image" content="https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg">
-                  """
+# thumbnail_modif = """
+#                 <meta property="og:image" content="https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg">
+#                   """
 
 #                 <html xmlns="http://www.w3.org/1999/xhtml"
 #                   xmlns:og="http://ogp.me/ns#">
                   
                   
 
-st.markdown(thumbnail_modif, unsafe_allow_html=True)
+# st.markdown(thumbnail_modif, unsafe_allow_html=True)
 
 
 
