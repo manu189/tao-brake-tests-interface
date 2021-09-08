@@ -18,7 +18,6 @@ st.set_page_config(page_title="Historial Ensayos de performance de freno", page_
 
 
 
-
 # st.image("https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg", width = 500)
 st.image("https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg")
 st.title('Graficador de Pruebas de freno')
@@ -135,3 +134,12 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
+thumbnail_modif = """
+                <html xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:og="http://ogp.me/ns#">
+                <meta property="og:title" content="Any title here" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg" />
+                  """
+
+st.markdown(thumbnail_modif, unsafe_allow_html=True)
