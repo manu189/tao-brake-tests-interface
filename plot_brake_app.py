@@ -19,13 +19,16 @@ def read_my_csv(file_name):
 
 st.set_page_config(page_title="Historial Ensayos de performance de freno", page_icon=":station:", layout="wide")
 
+# thumbnail_modif = """
+#                 <meta name="description" content="description of your website/webpage, make sure you use keywords!">
+#                 <meta property="og:url" content="https://tao-brake-tests-interface.herokuapp.com/" />
+#                 <meta property="og:description" content="description of your website/webpage">
+#                 <meta property="og:image" content="https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg">
+#                 <meta property="og:type" content="website" />
+#                 <meta property="og:locale" content="en_US" />
+#                   """
 thumbnail_modif = """
-                <meta name="description" content="description of your website/webpage, make sure you use keywords!">
-                <meta property="og:url" content="https://tao-brake-tests-interface.herokuapp.com/" />
-                <meta property="og:description" content="description of your website/webpage">
                 <meta property="og:image" content="https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg">
-                <meta property="og:type" content="website" />
-                <meta property="og:locale" content="en_US" />
                   """
 
 #                 <html xmlns="http://www.w3.org/1999/xhtml"
