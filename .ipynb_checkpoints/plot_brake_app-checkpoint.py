@@ -93,10 +93,6 @@ add_selectbox3 = st.sidebar.multiselect(
 
 
 
-
-
-
-
 # widget input numerica
 a = st.number_input('Insert a',1)
 
@@ -124,7 +120,7 @@ hide_streamlit_style = """
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             footer:after {
-                content:'CENADIF - Subgerencia de Ingenieria y Projectos especiales'; 
+                content:'CENADIF - Subgerencia de Ingenieria y Projectos Especiales'; 
                 visibility: visible;
                 display: block;
                 position: relative;
