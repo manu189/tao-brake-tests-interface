@@ -14,6 +14,25 @@ def read_my_csv(file_name):
     df['Aceleración'] = df['Aceleración'].replace(',','.', regex=True).astype(np.float)
     return df
 
+
+thumbnail_modif = """
+                <html xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:og="http://ogp.me/ns#">
+                  
+                  
+                <meta name="description" content="description of your website/webpage, make sure you use keywords!">
+                <meta property="og:title" content="short title of your website/webpage" />
+                <meta property="og:url" content="https://www.example.com/webpage/" />
+                <meta property="og:description" content="description of your website/webpage">
+                <meta property="og:image" content="//cdn.example.com/uploads/images/webpage_300x200.png">
+                <meta property="og:type" content="article" />
+                <meta property="og:locale" content="en_GB" />
+                <meta property="og:locale:alternate" content="fr_FR" />
+                <meta property="og:locale:alternate" content="es_ES" />
+                  """
+
+st.markdown(thumbnail_modif, unsafe_allow_html=True)
+
 st.set_page_config(page_title="Historial Ensayos de performance de freno", page_icon=":station:", layout="wide")
 
 
@@ -134,12 +153,3 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
-thumbnail_modif = """
-                <html xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:og="http://ogp.me/ns#">
-                <meta property="og:title" content="Any title here" />
-                <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg" />
-                  """
-
-st.markdown(thumbnail_modif, unsafe_allow_html=True)
