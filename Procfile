@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run plot_brake_app.py
