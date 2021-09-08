@@ -15,6 +15,10 @@ def read_my_csv(file_name):
     return df
 
 
+
+
+st.set_page_config(page_title="Historial Ensayos de performance de freno", page_icon=":station:", layout="wide")
+
 thumbnail_modif = """
                 <html xmlns="http://www.w3.org/1999/xhtml"
                   xmlns:og="http://ogp.me/ns#">
@@ -32,8 +36,6 @@ thumbnail_modif = """
                   """
 
 st.markdown(thumbnail_modif, unsafe_allow_html=True)
-
-st.set_page_config(page_title="Historial Ensayos de performance de freno", page_icon=":station:", layout="wide")
 
 
 
