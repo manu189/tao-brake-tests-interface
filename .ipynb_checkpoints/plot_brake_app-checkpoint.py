@@ -47,7 +47,7 @@ if uploaded_file is not None:
 #     st.write(fig)
     st.plotly_chart(fig)
     
-st.write('Ejemplo de registros')
+# st.write('Ejemplo de registros')
 
 fig = make_subplots(rows=1, cols=1,
                     shared_xaxes=True)
@@ -65,7 +65,7 @@ fig.add_trace(go.Scatter(x=df['Tiempo'], y=df['Aceleración'], name="0016.csv"),
 df = read_my_csv('0017.csv')
 fig.add_trace(go.Scatter(x=df['Tiempo'], y=df['Aceleración'], name="0017.csv"), row=1, col=1)
 
-fig.update_layout(yaxis_title="Aceleración [m/s²]", xaxis_title="Tiempo [s]", title="Ensayos de performance de freno")
+fig.update_layout(yaxis_title="Aceleración [m/s²]", xaxis_title="Tiempo [s]", title="Ejemplo de ensayos de performance de freno")
 
 st.plotly_chart(fig, use_container_width=True)
 
