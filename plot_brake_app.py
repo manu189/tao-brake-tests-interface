@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd 
 import numpy as np
 import plotly.express as px
@@ -14,8 +15,51 @@ def read_my_csv(file_name):
     df['Aceleración'] = df['Aceleración'].replace(',','.', regex=True).astype(np.float)
     return df
 
+
+
+
+
+
 st.set_page_config(page_title="Historial Ensayos de performance de freno", page_icon=":station:", layout="wide")
 
+
+
+# components.html(
+#     """
+#     <script>
+#         $('meta[property=og:image]').attr('content', 'https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg');
+#     </script>
+#     """
+# )
+
+components.html(
+    """
+    <script>
+        document.querySelector('meta[name="description"]').setAttribute("content", "https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg");
+    </script>
+    """
+)
+
+
+
+# thumbnail_modif = """
+#                 <meta name="description" content="description of your website/webpage, make sure you use keywords!">
+#                 <meta property="og:url" content="https://tao-brake-tests-interface.herokuapp.com/" />
+#                 <meta property="og:description" content="description of your website/webpage">
+#                 <meta property="og:image" content="https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg">
+#                 <meta property="og:type" content="website" />
+#                 <meta property="og:locale" content="en_US" />
+#                   """
+# thumbnail_modif = """
+#                 <meta property="og:image" content="https://www.argentina.gob.ar/sites/default/files/mt_fase_cenadif_logo.jpg">
+#                   """
+
+#                 <html xmlns="http://www.w3.org/1999/xhtml"
+#                   xmlns:og="http://ogp.me/ns#">
+                  
+                  
+
+# st.markdown(thumbnail_modif, unsafe_allow_html=True)
 
 
 
@@ -47,7 +91,7 @@ if uploaded_file is not None:
 #     st.write(fig)
     st.plotly_chart(fig)
     
-st.write('Ejemplo de registros')
+# st.write('Ejemplo de registros')
 
 fig = make_subplots(rows=1, cols=1,
                     shared_xaxes=True)
@@ -65,7 +109,7 @@ fig.add_trace(go.Scatter(x=df['Tiempo'], y=df['Aceleración'], name="0016.csv"),
 df = read_my_csv('0017.csv')
 fig.add_trace(go.Scatter(x=df['Tiempo'], y=df['Aceleración'], name="0017.csv"), row=1, col=1)
 
-fig.update_layout(yaxis_title="Aceleración [m/s²]", xaxis_title="Tiempo [s]", title="Ensayos de performance de freno")
+fig.update_layout(yaxis_title="Aceleración [m/s²]", xaxis_title="Tiempo [s]", title="Ejemplo de ensayos de performance de freno")
 
 st.plotly_chart(fig, use_container_width=True)
 
@@ -89,10 +133,6 @@ add_selectbox3 = st.sidebar.multiselect(
 
 # t = st.time_input('Set an alarm for', datetime.time(8, 45))
 # st.write('Alarm is set for', t)
-
-
-
-
 
 
 
@@ -124,7 +164,7 @@ hide_streamlit_style = """
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             footer:after {
-                content:'CENADIF - Subgerencia de Ingenieria y Projectos especiales'; 
+                content:'CENADIF - Subgerencia de Ingenieria y Projectos Especiales'; 
                 visibility: visible;
                 display: block;
                 position: relative;
